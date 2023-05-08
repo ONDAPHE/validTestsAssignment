@@ -1,2 +1,16 @@
-package com.training.assignmentone.dtos;public class DealerDto {
+package com.training.assignmentone.dtos;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class DealerDto {
+    private int idDealerDto;
+    private String nameDto;
+    private int limit_pDto;
 }
