@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -18,8 +19,9 @@ import java.time.LocalDateTime;
 @Table(name = "listing")
 public class Listing {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idListing;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
 
     @Column(name = "vehicule")
     private String vehicule;

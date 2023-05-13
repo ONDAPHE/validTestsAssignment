@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -15,8 +16,9 @@ import javax.persistence.*;
 @Builder
 public class Dealer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idDealer;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
 
     @Column(name = "name")
     private String name;
