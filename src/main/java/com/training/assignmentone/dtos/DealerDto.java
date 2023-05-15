@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class DealerDto {
-    private int idDealerDto;
+    private String idDealerDto;
     private String nameDto;
     private int limit_pDto;
 }

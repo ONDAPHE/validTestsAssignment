@@ -1,4 +1,4 @@
-package com.training.assignmentone;
+package com.training.assignmentone.TestsMappers;
 
 import com.training.assignmentone.dtos.DealerDto;
 import com.training.assignmentone.entity.Dealer;
@@ -11,7 +11,7 @@ public class DealerMapperTest {
     @Test
     void given_dealer_id_should_map_dealerDto_id(){
         //GIVEN
-        Dealer dealer= Dealer.builder().idDealer(11)
+        Dealer dealer= Dealer.builder().idDealer("11")
                 .name("Arthur")
                 .limit_p(5)
                 .build();
@@ -28,7 +28,7 @@ public class DealerMapperTest {
     @Test
     void given_dealerDto_id_should_map_dealer_id(){
         //GIVEN
-        DealerDto dealerDto = DealerDto.builder().idDealerDto(11)
+        DealerDto dealerDto = DealerDto.builder().idDealerDto("11")
                 .nameDto("Arthur")
                 .limit_pDto(5)
                 .build();

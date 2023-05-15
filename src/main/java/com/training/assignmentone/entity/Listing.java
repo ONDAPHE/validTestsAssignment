@@ -21,7 +21,7 @@ public class Listing {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String id;
+    private String idListing;
 
     @Column(name = "vehicule")
     private String vehicule;

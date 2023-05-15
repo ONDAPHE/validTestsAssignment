@@ -18,7 +18,7 @@ public class Dealer {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String id;
+    private String idDealer;
 
     @Column(name = "name")
     private String name;

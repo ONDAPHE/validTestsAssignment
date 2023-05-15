@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class ListingDto {
-    private int idListingDto;
+    private String idListingDto;
     private String vehiculeDto;
     private Double priceDto;
     private LocalDateTime createdAtDto;

@@ -1,4 +1,4 @@
-package com.training.assignmentone;
+package com.training.assignmentone.TestsMappers;
 
 import com.training.assignmentone.dtos.ListingDto;
 import com.training.assignmentone.entity.Dealer;
@@ -15,7 +15,7 @@ public class ListingMapperTest {
     @Test
     void given_listing_id_should_map_listingDto_id(){
         //GIVEN
-        Listing listing=Listing.builder().idListing(2)
+        Listing listing=Listing.builder().idListing("2")
                 .vehicule("Toyota")
                 .price(1500000.00)
                 .createdAt(LocalDateTime.now())
@@ -38,7 +38,7 @@ public class ListingMapperTest {
     @Test
     void given_listingDto_id_should_map_listing_id(){
         //GIVEN
-        ListingDto listingDto = ListingDto.builder().idListingDto(2)
+        ListingDto listingDto = ListingDto.builder().idListingDto("2")
                 .vehiculeDto("Toyota")
                 .priceDto(1500000.00)
                 .createdAtDto(LocalDateTime.now())
